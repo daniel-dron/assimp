@@ -212,6 +212,9 @@ struct aiLight {
      */
     C_STRUCT aiColor3D mColorAmbient;
 
+    C_STRUCT aiColor3D mColor;
+    float mPower;
+
     /** Inner angle of a spot light's light cone.
      *
      *  The spot light has maximum influence on objects inside this

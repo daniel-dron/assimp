@@ -962,6 +962,9 @@ void glTF2Importer::ImportLights(glTF2::Asset &r) {
         CopyValue(colorWithIntensity, ail->mColorDiffuse);
         CopyValue(colorWithIntensity, ail->mColorSpecular);
 
+        CopyValue(light.color, ail->mColor);
+        ail->mPower = light.intensity;
+
         if (ail->mType == aiLightSource_DIRECTIONAL) {
             ail->mAttenuationConstant = 1.0;
             ail->mAttenuationLinear = 0.0;
